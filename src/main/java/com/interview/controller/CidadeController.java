@@ -26,7 +26,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping(value="/cidades", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value="/v1/cidades/", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(value = "API REST Cidades")
 public class CidadeController {
 
