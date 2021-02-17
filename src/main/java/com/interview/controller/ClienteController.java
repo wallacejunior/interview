@@ -28,7 +28,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping(value = "/v1/clientes/", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/clientes/", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(value = "API REST Clientes")
 public class ClienteController {
 	@Autowired
@@ -42,7 +42,7 @@ public class ClienteController {
 	}	
 	
 
-	@GetMapping("/name/{clientName}")
+	@GetMapping("/nome/{clientName}")
 	@ApiOperation(value = "Pesquisa o cliente pelo nome")
 	public List<ClienteEntity> findByName(@PathVariable @NotNull String clientName) throws InvalidFieldException{
 		return clienteService.findByNome(clientName);

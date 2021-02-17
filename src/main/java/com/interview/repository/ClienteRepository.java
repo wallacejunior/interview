@@ -12,5 +12,4 @@ public interface ClienteRepository extends JpaRepository<ClienteEntity, Long> {
 	List <ClienteEntity> findByNome(String nome);
 
 	ClienteEntity save(Optional<ClienteEntity> clienteEntity);
-	
 }

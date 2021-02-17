@@ -26,7 +26,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping(value="/V1/cidades", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value="/cidades", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(value = "API REST Cidades")
 public class CidadeController {
 
@@ -47,8 +47,8 @@ public class CidadeController {
 	
 	@GetMapping("/estado/{estado}")
 	@ApiOperation(value = "Pesquisa cidade pelo estado")
-	public List<CidadeEntity> findByEstado(@PathVariable String Estado) throws InvalidFieldException{
-		return cidadeService.findByEstado(Estado);
+	public List<CidadeEntity> findByEstado(@PathVariable String estado) throws InvalidFieldException{
+		return cidadeService.findByEstado(estado);
 	}
 	
 	@ExceptionHandler
