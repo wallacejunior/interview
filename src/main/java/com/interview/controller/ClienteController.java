@@ -64,8 +64,8 @@ public class ClienteController {
 
 	@PutMapping
 	@ApiOperation(value = "Altera o nome de um cliente")
-	public ClienteEntity updateClienteName(@RequestBody ClienteEntity client) throws InvalidFieldException{
-		return clienteService.updateName(client);
+	public ClienteEntity updateClienteName(@RequestBody ClienteEntity cliente) throws InvalidFieldException{
+		return clienteService.updateName(cliente);
 	}
 	
 	@ExceptionHandler

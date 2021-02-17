@@ -47,7 +47,7 @@ public class ClienteServiceImpl implements ClienteService {
 		Optional<ClienteEntity> clienteEntity = clienteRepository.findById(cliente.getId());
 		if(clienteEntity.isPresent()) {
 			clienteEntity.get().setNome(cliente.getNome());
-			return clienteRepository.save(clienteEntity);
+			return clienteRepository.save(clienteEntity.get());
 		}else {
 			throw new InvalidFieldException("Não existe cliente com o código digitado!");
 		}
